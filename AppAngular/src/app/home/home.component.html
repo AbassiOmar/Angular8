@@ -1,3 +1,4 @@
+<div class="wrapper">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -18,7 +19,7 @@
 </table>
 
 <div class="pages" *ngIf="pager.totalPages > 1">
-  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+  <ul *ngIf="pager.pages && pager.pages.length" >
     <li [ngClass]="{disabled:pager.currentPage === 1}" (click)="setPage(1)">
       <a>
         <<</a> </li> <li [ngClass]="{disabled:pager.currentPage === 1}" (click)="setPage(pager.currentPage - 1)">
@@ -36,3 +37,4 @@
   </ul>
 </div>
 
+</div>
