@@ -1,0 +1,29 @@
+.pages {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  color: black;
+}
+
+.pages li {
+  padding: 7px 11px;
+  margin: 0;
+  display: inline-block;
+  border: 0;
+  border-right: 1px solid #5e6771;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.pages span:last-of-type {
+  border: 0;
+}
+
+.pages li:hover, .extranet-interface .pages li.active {
+  background-color:grey;
+  background-image: linear-gradient(45deg, grey, rgba(255, 255, 255, 0));
+  transition: all 0.3s ease;
+  color:white;
+}

@@ -1,0 +1,38 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" sortable="name">Name</th>
+      <th scope="col" sortable="area">Phone</th>
+      <th scope="col" sortable="population">Address</th>
+      <th scope="col">Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of pagedItems">
+      <td class="mr-2">{{std.name}}</td>
+      <td>{{std.phone}}</td>
+      <td>{{std.address}}</td>
+      <td><img src={{std.image}}></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pages" *ngIf="pager.totalPages > 1">
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+    <li [ngClass]="{disabled:pager.currentPage === 1}" (click)="setPage(1)">
+      <a>
+        <<</a> </li> <li [ngClass]="{disabled:pager.currentPage === 1}" (click)="setPage(pager.currentPage - 1)">
+          <a>
+            <</a> </li> <li *ngFor="let page of pager.pages" class="page"
+              [ngClass]="{active:pager.currentPage === page}" (click)="setPage(page)">
+              <a>{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" (click)="setPage(pager.currentPage + 1)">
+      <a>></a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" (click)="setPage(pager.totalPages)">
+      <a>>></a>
+    </li>
+  </ul>
+</div>
+
