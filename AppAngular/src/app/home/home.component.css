@@ -21,9 +21,12 @@
   border: 0;
 }
 
-.pages li:hover, .extranet-interface .pages li.active {
+.pages li:hover, .pages li.active {
   background-color:grey;
   background-image: linear-gradient(45deg, grey, rgba(255, 255, 255, 0));
   transition: all 0.3s ease;
   color:white;
+}
+.avatar{
+  height: 50px;
 }
