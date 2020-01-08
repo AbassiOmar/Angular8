@@ -1,0 +1,21 @@
+<div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" sortable="name">Name</th>
+            <th scope="col" sortable="area">Phone</th>
+            <th scope="col" sortable="population">Address</th>
+            <th scope="col">Avatar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let std of students">
+            <td class="mr-2">{{std.name}}</td>
+            <td>{{std.phone}}</td>
+            <td>{{std.address}}</td>
+            <td> <app-image urlImage={{std.image}} (click)="getDetails(std)"></app-image></td>
+
+          </tr>
+        </tbody>
+      </table>
+</div>>

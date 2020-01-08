@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RestApiService } from '../services/rest-api.service';
-import { Pagination } from '../models/pagination.model';
-import { PaginationService } from '../services/pagination.service';
-import { Student } from '../models/student.model';
+import { RestApiService } from 'services/rest-api.service';
+import { Pagination } from 'models/pagination.model';
+import { PaginationService } from 'services/pagination.service';
+import { Student } from 'models/student.model';
 
 @Component({
   selector: 'app-home',
